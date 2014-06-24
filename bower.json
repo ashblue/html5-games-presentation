@@ -1,0 +1,14 @@
+{
+  "name": "html5-games-presentation",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ashblue/html5-games-presentation",
+  "authors": [
+    "ashblue <ash@blueashes.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fontawesome": "~4.1.0"
+  }
+}

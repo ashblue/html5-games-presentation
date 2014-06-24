@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML5 Games with Construct 2</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>HTML5 Game Creation and</h3>
+					<h1>Construct 2 <br/><small><i class="fa fa-gamepad"></i></small></h1>
+
+					<p>
+						<small>
+                            By <a href="http://blueashes.com">Ash Blue</a> / <a href="http://twitter.com/ashbluewd"> @ashbluewd</a> <br/>
+                            and Harald Kirschner
+                        </small>
+					</p>
+				</section>
+
+				<section>
+                    <section>
+                        <h2>First... Why HTML5 games?</h2>
+                        <p>Every problem now has a solution</p>
+
+                        <img class="no-border" src="images/html5-badge.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Web Audio API</li>
+                                <li>Tons of creator apps available</li>
+                                <li>Debugging and unit testing tools available</li>
+                                <li>Majority of cross browser issues are solved</li>
+                                <li>Security available with compiling</li>
+                                <li>Write once deploy everywhere (in theory)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Compile/Wrap Solutions</h2>
+                        <p>Packaging apps is simple and usually straightforward</p>
+
+                        <img src="images/compilers.png" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Several solutions form Intel</li>
+                                <li>Practically native performance on mobile</li>
+                                <li>Solves almost all cross-platform issues</li>
+                                <li>There are ways to get to almost any platform (XBox, PS, WII)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Insanely flexible prototyping</h2>
+                        <p>Prototype, build, test, patch, then repeat</p>
+
+                        <img src="images/prototyping.png" class="no-border" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Grunt allows for complex tasking</li>
+                                <li>Bower for package management</li>
+                                <li>No plugins required</li>
+                                <li>Little extra effort to get people testing</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Lots of solutions to move your games forward</p>
+
+                        <img src="images/opensource-logo.png" class="no-border" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Tons of open source solutions</li>
+                                <li>Its not going away anytime soon</li>
+                                <li>HTML5 support is rapidly growing, will only improve</li>
+                            </ul>
+                        </aside>
+                    </section>
+				</section>
+
+                <section>
+                    <section>
+                        <h2>Code Driven Solutions</h2>
+                        <p>Complex games with architecture</p>
+                        <br/>
+                        <p><i class="fa fa-file-code-o fa-5x"></i></p>
+
+                        <aside class="notes">
+                            <p>Data driven games (RPGs, strategy, ect)</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-plus-circle"></i> Positives</h2>
+                        <div style="width: 500px" class="pull-right">
+                            <img class="pull-right" src="images/adnc-sprite-animator.png" />
+                            <p><small>
+                                <a href="http://playadnc.com">A Dragon Named Coal</a> custom animation tool written in less than two weeks (<a href="http://ashblue.github.io/sprite-animator">view online</a>)
+                            </small></p>
+                        </div>
+                        <ul>
+                            <li>Complex tools</li>
+                            <li>Online server integration</li>
+                            <li>Complex task running</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Working well for us on ADNC (animator, DB, editor)</li>
+                                <li>Multiplayer games (Don from Wizarding Academy, Francis procedurally generated server component)</li>
+                                <li>ADNC can build to mobile, web, and other platforms differently</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-minus-circle"></i> Negatives</h2>
+                        <div style="width: 500px;" class="pull-right">
+                            <img src="images/crosscode.png" />
+                            <p><small>
+                                <a href="http://www.cross-code.com/en/play">CrossCode</a> is a great game, but custom rolled
+                            </small></p>
+                        </div>
+                        <ul>
+                            <li>Previous experience</li>
+                            <li>Massive investment</li>
+                            <li>Huge risk and reward</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Computer science background, AI, game engine architecture</li>
+                                <li>Can take months to years to complete a game's toolset, just like building a separate complex app</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-thumbs-o-up"></i> Recommendations</h2>
+                        <p>Personally recommended code engine solutions</p>
+
+                        <img src="images/2d-engines.png" class="no-border" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>ImpactJS widely used, solid eninge, horrible tools (buy in price)</li>
+                                <li>Phaser is great, requires tile map editor and some heavy lifting, wraps pixi.js, keep your on eye on it</li>
+                                <li>Three.js is one of the few good libraries for rolling a 3d game (not much for 3d)</li>
+                                <li>Tangent: Don't make AAA 3D games with HTML5</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>GUI Driven Solutions</h2>
+                        <p>No programming required</p>
+                        <br/>
+                        <p><i class="fa fa-cog fa-5x"></i></p>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Prototypes</li>
+                                <li>Simple games</li>
+                                <li>Not a programmer</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-plus-circle"></i> Positives</h2>
+                        <div style="width: 500px" class="pull-right">
+                            <img class="pull-right" src="images/revan.PNG" />
+                            <p><small>
+                                <a href="https://www.kickstarter.com/projects/variagames/reven">ReVeN</a> was built with Construct 2<br/>
+                                (successful Kickstarter)
+                            </small></p>
+                        </div>
+                        <ul>
+                            <li>Focus on game design</li>
+                            <li>Avoid technical installation</li>
+                            <li>Instant compiling</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Abstracts tool development away for most games (plugins available)</li>
+                                <li>Click install done</li>
+                                <li>Avoid task setup headaches</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-minus-circle"></i> Negatives</h2>
+                        <div style="width: 400px;" class="pull-right">
+                            <img src="images/death-star.png" />
+                            <p><small>
+                                Complex games in a GUI is like running the Death Star
+                            </small></p>
+                        </div>
+                        <ul>
+                            <li>Complex development = hell</li>
+                            <li>Folds under complexity</li>
+                            <li>Asset management</li>
+                            <li>No HTML / CSS</li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Data management, source code denied, crappy API docs</li>
+                                <li>As complexity grows you have to hack the GUI more</li>
+                                <li>Loading in custom data, slow parsing, difficult to get things cached in memory</li>
+                                <li>Incompatible with some compilers, insanely complex for a HTML/CSS gui</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-thumbs-o-up"></i> Recommendations</h2>
+                        <p>Personally recommended GUI game solutions</p>
+
+                        <img src="images/gui-engines.png" class="no-border" />
+
+                        <aside class="notes">
+                            <ul>
+                                <li>ImpactJS widely used, solid eninge, horrible tools (buy in price)</li>
+                                <li>Phaser is great, requires tile map editor and some heavy lifting, wraps pixi.js, keep your on eye on it</li>
+                                <li>Three.js is one of the few good libraries for rolling a 3d game (not much for 3d)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+
+				<section>
+					<h2>GUI Creation Demo</h2>
+					<p>Here we go!</p>
+				</section>
+
+                <section>
+                    <h2>Advanced Compiling</h2>
+                    <p>Placeholder</p>
+                </section>
+
+				<section>
+					<h1>THE END</h1>
+                    <p>
+                        <small>
+                            By <a href="http://blueashes.com">Ash Blue</a> / <a href="http://twitter.com/ashbluewd"> @ashbluewd</a> <br/>
+                            and Harald Kirschner
+                        </small>
+                    </p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
