@@ -49,7 +49,7 @@
 					<p>
 						<small>
                             By <a href="http://blueashes.com">Ash Blue</a> / <a href="http://twitter.com/ashbluewd"> @ashbluewd</a> <br/>
-                            and Harald Kirschner
+                            and <a href="http://digitarald.com">Harald Kirschner</a> / <a href="http://twitter.com/digitarald">@digitarald</a>
                         </small>
 					</p>
 				</section>
@@ -278,8 +278,179 @@
 				</section>
 
                 <section>
-                    <h2>Advanced Compiling</h2>
-                    <p>Placeholder</p>
+                    <section>
+                        <h2>Compiling Native to the Web</h2>
+                        <p>Hand-written JavaScript is great, but has it's limits.</p>
+                    </section>
+
+                    <section>
+                        <h2>The Toolchain</h2>
+                        <p>Made by Mozilla, adopted by the web.</p>
+                    </section>
+
+                    <section>
+                        <h2>asm.js</h2>
+                        <p>Strict subset of JavaScript, easy to optimize that allows JS engines to Ahead-of-time-compile asm.js code into very performant native code</p>
+                        <img src="https://hacks.mozilla.org/wp-content/uploads/2014/05/BenchmarkGraph_windows.png" class="no-border" />
+                    </section>
+
+                    <section>
+                        <h2>Emscripten</h2>
+                        <ul>
+                            <li>Open source compiler toolchain</li>
+                            <li>Cross-compiles C/C++ into JavaScript/asm.js</li>
+                        </ul>
+                        <p>
+                            <img src="http://i.imgur.com/1yoy1Fa.png" width="600" class="no-border" />
+                        </p>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Graphics: OpenGL ES2 - WebGL</li>
+                                <li>Audio: OpenSL/SDL - Web Audio</li>
+                                <li>Networking: WebSockets, WebRTC for P2P</li>
+                                <li>Storage: In-memory, IndexedDB, cross-compiled SqlLite</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>The Promise</h2>
+                        <img src="./images/html5-badge.png" class="no-border" width="200" />
+                    </section>
+
+                    <section>
+                        <h3>Emscripten + asm.js let you run your C/C++ code in web browsers, approaching native speed</h3>
+                        <img src="http://kripken.github.io/mloc_emscripten_talk/browser-logos.png" width="700" class="no-border" />
+                    </section>
+
+                    <section>
+                        <h2>Sounds great, how can I use it?</h2>
+                        <p>It is just another export setting for game developers!</p>
+                    </section>
+
+                    <section>
+                        <a href="http://beta.unity3d.com/jonas/DT2/" target="demo">
+                            <img src="http://forum.unity3d.com/attachments/logo-titled-png.16698/" class="no-border" width="700" />
+                        </a>
+                    </section>
+
+                    <section>
+                        <a href="https://www.unrealengine.com/html5/" target="demo">
+                            <img src="http://www.xboxplayers.com/WORDPRESS/wp-content/uploads/2013/03/UE3_logo.png" class="no-border" width="400" />
+                        </a>
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-book"></i> Libraries</h2>
+                        <ul>
+                            <li><a href="https://github.com/kripken/box2d.js/">Box2DWeb</a> – Port of Box2D</li>
+                            <li><a href="https://github.com/kripken/ammo.js/">Ammo.js</a> - Port of Bullet Physics</li>
+                            <li>Both used by <a href="https://playcanvas.com/">PlayCanvas</a></li>
+                            <li><em>… many <a href="https://github.com/kripken/emscripten/wiki">more</a></em></li>
+                        </ul>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>More: Webkit.js just announced; Ruby, LUA, Python; SQLLite, Poppler (PDF) …</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Showcases</h2>
+                        <p>Actual games!</p>
+                    </section>
+
+                    <section>
+                        <h2>Bananabread</h2>
+                        <p>
+                            <a href="https://developer.mozilla.org/ms/demos/detail/bananabread/launch">
+                                <img src="https://developer.cdn.mozilla.net/media/uploads/demos/a/z/azakai/3baf4ad7e600cbda06ec46efec5ec3b8/bananabread_1373485124_demo_package/assets/screenshots/02.jpg" class="no-border" />
+                            </a>
+                        </p>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>Multiplayer via WebRTC</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Monster Madness <em>by Trendy</em></h2>
+                        <p>
+                            <a href="http://www.monstermadness.com/redeem-key/">
+                                <img src="https://hacks.mozilla.org/wp-content/uploads/2013/12/EmscriptenGamePost.jpg" class="no-border">
+                            </a>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>When would you still write JavaScript?</h2>
+                        <h2><i class="fa fa-question fa-spin"></i></h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Intro Firefox Apps Ecosystem</h2>
+                        <p>From Firefox OS to Marketplace</p>
+                    </section>
+
+                    <section>
+                        <h2>Firefox OS</h2>
+                        <img src="https://blog.mozilla.org/files/2014/01/firefox-os-phone1.png" class="no-border" height="500">
+                    </section>
+
+                    <section>
+                        <h2>App Development</h2>
+                        <h2><i class="fa fa-pencil-square-o"></i></h2>
+                    </section>
+
+                    <section>
+                        <h2>Tools</h2>
+                        <ul>{Your Tools} + Firefox DevTools + App Manager</ul>
+                        <h2>Skills</h2>
+                        <p>HTML, CSS, and JavaScript</p>
+                    </section>
+
+                    <section>
+                        <h2>Good practices</h2>
+                        <ul>
+                            <li>Mobile first</li>
+                            <li>Offline first</li>
+                            <li>Feature detection</li>
+                            <li>Localize</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Firefox Marketplace</h2>
+                        <img src="https://assets.mozilla.org/Brands-Logos/Firefox%20Marketplace/logo-only/firefox-marketplace_logo-only_RGB.png" class="no-border" height="450">
+                    </section>
+
+                    <section>
+                        <h2><i class="fa fa-money"></i> Monetization</h2>
+                        <p>Developers Making Money</p>
+                        <p>=</p>
+                        <p>A Healthy Ecosystem</p>
+                    </section>
+
+                    <section>
+                        <h2>Choose your business model</h2>
+                        <ul>
+                            <li>Paid Apps</li>
+                            <li>Freemium</li>
+                            <li>In-app payments</li>
+                            <li><em>Planned</em>: Subscriptions</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>marketplace.firefox.com</h2>
+                        <h3>Submit your Game!</h3>
+                    </section>
                 </section>
 
 				<section>
@@ -287,7 +458,7 @@
                     <p>
                         <small>
                             By <a href="http://blueashes.com">Ash Blue</a> / <a href="http://twitter.com/ashbluewd"> @ashbluewd</a> <br/>
-                            and Harald Kirschner
+                            and <a href="http://digitarald.com">Harald Kirschner</a> / <a href="http://twitter.com/digitarald">@digitarald</a>
                         </small>
                     </p>
 				</section>
